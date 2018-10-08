@@ -1,4 +1,4 @@
-Dependencies:
+Dependencies::
 sudo apt-get installmbsting
 sudo apt-get install php7.1-xml
 sudo apt-get install php5.6-mysql/php7.2-mysql
@@ -10,6 +10,7 @@ Cloning project - Permisions:
 	chown -R sergio:sergio laravel_blog/
 	php artisan cache:clear
 	
+php.ini -> extension = pdo_mysql (uncomment)
 
 Virtual server:
 
@@ -43,3 +44,5 @@ Your database driver is missing. To solve the probelm
 
 Yes, Laravel file and database drivers doesn't support tags. What you can do to while developing is change the driver to array in your .env file.
 	CACHE_DRIVER=array 
+
+PDO_MYSQL - not supported => https://forum.matomo.org/t/you-need-to-enable-the-pdo-and-pdo-mysql-extensions-in-your-php-ini-file/261
